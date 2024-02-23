@@ -1,12 +1,14 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import data.TestData;
+import drivers.WebDriverProvider;
 import helpers.Attachments;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import pages.*;
 
 public class TestBase {
@@ -19,12 +21,14 @@ public class TestBase {
     ActivitiesPage activitiesPage = new ActivitiesPage();
     CityGuidePage cityGuidePage = new CityGuidePage();
   TestData testData = new TestData();
-
-
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = "1920x800";
-        Configuration.baseUrl = "https://www.visitacity.com";
+        WebDriverProvider.setConfig();
+
+    }
+    @BeforeEach
+    void addListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
     @AfterEach
     void addAttachments() {
