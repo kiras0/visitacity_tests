@@ -18,18 +18,18 @@ public class SearchTest extends TestBase {
     @Story("Successful search for city with Guide")
     @ValueSource(strings = {"Amsterdam", "Tokyo"})
     @ParameterizedTest(name = "Searching for {0}")
-    void popularCitySearchTest(String popularCity) {
+    void popularCitySearchTest(String popularCityCollection) {
         mainPage.openPage()
-                .search(popularCity);
-        cityPage.checkForTitle(popularCity);
+                .search(popularCityCollection);
+        cityPage.checkForTitle(popularCityCollection);
     }
 
     @Story("Successful search for city with no Guide open activities")
     @ValueSource(strings = {"Lexington",  "Crystal"})
     @ParameterizedTest(name = "Searching for {0}")
-    void citySearchTest(String city) {
+    void citySearchTest(String cityCollection) {
         mainPage.openPage()
-                .search(city);
+                .search(cityCollection);
         activitiesPage.checkPageLoaded();
     }
 
