@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -14,7 +15,7 @@ public class MainPage {
             errorMsg = $(".uib-typeahead-match");
     @Step("Open Main page")
     public MainPage openPage() {
-        open("");
+        open(baseUrl);
         String titleText = "what's your destination?";
         bodyContent.shouldHave(text(titleText));
         return this;

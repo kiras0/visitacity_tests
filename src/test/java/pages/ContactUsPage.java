@@ -5,6 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static com.codeborne.selenide.Selenide.open;
@@ -17,10 +18,9 @@ public class ContactUsPage {
             messageContainer = $("#shareMessage"),
             submitBtn = $(".btn-u");
     private final ElementsCollection contactFormMsg = $("#aboutPages").$$(".visit-title-md");
-
     @Step("Open 'Contact Us' page")
     public ContactUsPage openContactUsPage() {
-        open("/contact");
+        open(baseUrl+"/contact");
         bodyAbout.shouldHave(text("Contact Us"));
         return this;
     }

@@ -6,6 +6,7 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -14,14 +15,14 @@ public class MyPlanPage {
             plansContainer = $("#myPlansContainer"),
             searchTool = $("#cityHeaderContainer").$(".form-control"),
             guideTitle = $(".large_title_link"),
-            myPlan = $("#cityHeaderContainer .loginbar"),
+            myPlan = $("#cityHeaderContainer .loginbar").$(".ng-binding"),
             deleteMsg = $(".modal-dialog "),
             deleteBtn = $("button");
     private final ElementsCollection guideOptions = $(".itin_actions_wrapper").$$(".ng-binding");
     private final String  noPlansText = "You did not yet create any plans.";
     @Step("Open My Plan page")
     public MyPlanPage openPage() {
-        open("/my-plans");
+        open(baseUrl+"/my-plans");
         plansContainer.shouldHave(text(noPlansText));
         return this;
     }
@@ -50,6 +51,7 @@ public class MyPlanPage {
         myPlan.click();
         return this;
     }
+
     @Step("Deleting saved itinerary")
     public MyPlanPage deleteItin() {
         guideOptions.findBy(text("delete")).click();

@@ -6,6 +6,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
@@ -19,7 +20,7 @@ public class JoinPage {
     private final ElementsCollection loginFormFields = $$("#loginForm input");
     @Step("Open Join page")
     public JoinPage openPage() {
-        open("/signup");
+        open(baseUrl+"/signup");
         headerTitle.shouldHave(text("Join"));
         return this;
     }
