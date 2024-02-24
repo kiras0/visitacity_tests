@@ -34,12 +34,11 @@
   <code><img width="5%" title="Telegram" src="media/images/telegram-logo.svg"></code>
 </p>
 
-## :gear: How to run the automated tests
+# :gear: How to run the automated tests
 
 ## :computer: Local
 
 ### Local Driver Test Run
-
 
 To run the automated tests local:
 ```bash
@@ -90,6 +89,8 @@ You can change the following parameters in the test:
 ### Example of a Run report
 
 ### <img width="3%" title="Selenoide" src="media/images/selenoid-logo.svg"> Video of the Test
+
+<img title="Jenkins" src="media/video-gif/test_video.gif">
 
 ### <img width="3%" title="Telegram" src="media/images/telegram-logo.svg"> Telegram test result notification
 
