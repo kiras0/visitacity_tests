@@ -40,14 +40,13 @@
 
 ### Local Driver Test Run
 
-To run the automated tests local:
+To run the automated tests locally:
 ```bash
 gradle clean test -Denv='local'
 ```
 *Note: The following method will run the tests with the following parameters: (can be changed manually at src/test/resources/local.properties)*
 + Browser: **Google Chrome**
 + Browser version: **119.0**
-+ Browser size: **1920x1080**
 
 ### Local Selenoid UI Test Run 
 
@@ -59,41 +58,111 @@ gradle clean test -Denv='remote'
 + Remote Url: **selenoid.autotests.cloud**
 + Browser: **Google Chrome**
 + Browser version: **100.0**
-+ Browser size: **1920x1080**
 
 ## :satellite: Remote
 
-### <img width="4%" title="Jenkins" src="media/images/jenkins-logo.svg"> Using [Jenkins](https://jenkins.autotests.cloud/job/C23-mikenvico-visitacityTests/)
+### <img width="3%" title="Jenkins" src="media/images/jenkins-logo.svg"> Using [Jenkins](https://jenkins.autotests.cloud/job/C23-mikenvico-visitacityTests/)
 
-To run this test through Jenkins, press button <code>:arrow_forward:Build with Parameters</code>.
+To run this test through Jenkins, press button :arrow_forward:<code>Build with Parameters</code>.\
 You can see the results via Allure Reports, or use the link to Allure TestOps on the same page.
 <p align="center">
-<img src="media/images/jenkins_autotests_cloud-HowToRunTest.png" alt="How To Run Test" width="70%">
+<img src="media/images/jenkins_autotests_cloud-HowToRunTest.png" alt="How To Run Test" width="60%">
 </p>
 
-### <img width="4%" title="Jenkins" src="media/images/jenkins-logo.svg"> Test Parameters
+### <img width="3%" title="Jenkins" src="media/images/jenkins-logo.svg"> Test Parameters
 You can change the following parameters in the test:
 + <code>TASK</code> - Test to be executed. Default:<code>ui_test</code>
 + <code>ENV</code> - To set **local** or **remote** properties
 + <code>POPULAR_CITY</code> - Set default search city for tests (***Must be a popular city. E.g. Rome***).
 <p align="center">
-<img src="media/images/jenkins_autotests_cloud-parameters.png" alt="Test Parameters" width="70%">
+<img src="media/images/jenkins_autotests_cloud-parameters.png" alt="Test Parameters" width="60%">
 </p>
 
-## <img width="4%" title="Jenkins" src="media/images/allure-testOps-logo.svg"> Allure TestOps Integration
+## [<img width="3%" title="Allure TestOps" src="media/images/allure-testOps-logo.svg">Allure TestOps](https://allure.autotests.cloud/project/4070/dashboards) Integration
 
-## <img width="4%" title="Jenkins" src="media/images/allure-report-logo.svg"> Allure Reports Integration
+### Dashboard
+
+<p align="center">
+<img src="media/images/allure_autotests_cloud-dashboards.png" alt="Allure TestOps Dashboard" width="80%">
+</p>
+
+---
+
+### Test Cases
+
+<p align="center">
+<img src="media/images/allure_autotests_cloud-test_cases.png" alt="Allure TestOps Test Cases" width="80%">
+</p>
+
+---
+
+### Launches
+
+ <p align="center">
+ <img src="media/images/allure_autotests_cloud-launches_run.png" alt="Allure TestOps Launches" width="80%">
+ </p>
+
+
+## [<img width="3%" title="Allure Reports" src="media/images/allure-report-logo.svg">Allure Reports](https://jenkins.autotests.cloud/job/C23-mikenvico-visitacityTests/allure/) Integration
+
+### Local Allure Overview
+
+<p align="center">
+<img src="media/images/allure_report_local-overview.png" alt="Allure Reports Overview" width="80%">
+</p>
+
+---
+
+### Jenkins Allure Overview
+
+<p align="center">
+<img src="media/images/allure_report-main_overview.png" alt="Allure Reports Overview" width="80%">
+</p>
+
+---
+
+### Graphs
+
+<p align="center">
+<img src="media/images/allure_report-graphs.png" alt="Allure Reports Overview" width="80%">
+</p>
 
 ## :ledger: Test Results
 
-### Example of a Run report
+---
 
-### <img width="3%" title="Selenoide" src="media/images/selenoid-logo.svg"> Video of the Test
+### Example of a Test Run report
 
-<img title="Jenkins" src="media/video-gif/test_video.gif">
+> Allure Reports Provides a detailed step by step report of each test  user stories and test suites.\
+> With each test result there is attached material such as test executed steps, screenshot, page source as well as a video.
+
+<p align="center">
+<img src="media/images/allure_reports-test_result.png" alt="Allure Test Result" width="80%">
+</p>
+
+---
+
+### <img width="3%" title="Selenoid" src="media/images/selenoid-logo.svg"> Video of the Test
+
+> Example of Test and how Selenoid provides a video after each test.\
+> Video of: Deleting days from existing Guide itinerary test
+
+<p align="center">
+<img width="80%" title="Example Test Video" src="media/video-gif/test_video.gif">
+</p>
+
+---
 
 ### <img width="3%" title="Telegram" src="media/images/telegram-logo.svg"> Telegram test result notification
 
-## <img width="4%" title="Jenkins" src="media/images/jira-logo.svg">Jira Integration
+> After tests are finished Telegram Bot sends test result notification.
 
+<p align="center">
+<img src="media/images/telgram-report.png" alt="Telegram Notification" width="60%">
+</p>
 
+---
+
+## <img width="4%" title="Jira" src="media/images/jira-logo.svg">Jira Integration
+
+> 
