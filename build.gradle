@@ -68,25 +68,4 @@ task ui_test(type: Test) {
         includeTags("ui")
     }
 }
-//task itinerary_test(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("itinerary")
-//    }
-//}
-//task myPlan_test(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("myPlan")
-//    }
-//}
-//task searchMain_test(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("searchMain")
-//    }
-//}
-//task join_test(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("join")
-//    }
-//}
-
 
