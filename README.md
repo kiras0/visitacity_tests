@@ -1,11 +1,15 @@
 
-# <p align="center">Automated tests for Visit A City website</p>
+# <p align="center">Automated tests for [Visit A City](https://www.visitacity.com) website</p>
 
-<p align="center"><img width=60% title="VISITACITY" src="media/images/logoVisitacity.jpg">
-</p>
+<p align="center" ><a href="https://www.visitacity.com">
+<img width=60% title="VISITACITY" src="media/images/logoVisitacity.jpg">
+</a></p>
 
 ## :link: Contents
 - [Tools and Istruments](#tools-and-instruments)
+- [Test Cases](#bookmark_tabs-test-cases)
+- - [Automation Test](#desktop_computer-automated-tests)
+- - [Manual Test](#hand-manual-test)
 - [How to run the automated tests](#how-to-run-the-automated-tests)
 - - [Local](#local)
 - - [Using Jenkins](#satellite-remote)
@@ -33,6 +37,34 @@
   <code><img width="5%" title="Jira" src="media/images/jira-logo.svg"></code>
   <code><img width="5%" title="Telegram" src="media/images/telegram-logo.svg"></code>
 </p>
+
+# :bookmark_tabs: Test Cases
+
+## :desktop_computer: Automated Tests
+
+- **Itinerary functionality tests.**
+- - *Submitting a Form with incorrect email credentials test.*
+- - *Submitting a Form with 'Subject' field not filled in test.*
+- **Testing Join functionality.**
+- - *Checking for error when registering without password.*
+- **Testing of Guest user experience with 'My Plan'.**
+- - *Deleting a guide from 'My Plan' test.*
+- - *Adding an itinerary to 'My Plan' from suggested Guide Itineraries.*
+- - *Adding a selected itinerary to 'My Plan' by modifying it.*
+- **Testing search functionality on index page.**
+- - *Search no results found test.*
+- - *Successful search for city with no Guide open activities.*
+- - *Successful search for city with Guide*
+
+## :hand: Manual Test
+
+- **Sign In test.**
+- - *Testing of successful login with given credentials*
+- **Currency test.**
+- - *Testing of top currency conversion*
+- **AD display.**
+- - *Testing for Popular Activities & Things To Do AD display*
+
 
 # :gear: How to run the automated tests
 
@@ -88,10 +120,16 @@ You can change the following parameters in the test:
 
 ---
 
-### Test Cases
+### Automation Test Case
 
 <p align="center">
-<img src="media/images/allure_autotests_cloud-test_cases.png" alt="Allure TestOps Test Cases" width="80%">
+<img src="media/images/allure_autotests_cloud-test_cases.png" alt="Automation Test Cases" width="80%">
+</p>
+
+### Manual Test Case
+
+<p align="center">
+<img src="media/images/allure_autotests_cloud-manual.png" alt="Manual Test Cases" width="80%">
 </p>
 
 ---
@@ -165,4 +203,6 @@ You can change the following parameters in the test:
 
 ## <img width="4%" title="Jira" src="media/images/jira-logo.svg">Jira Integration
 
-> 
+<p align="center">
+<img src="media/images/jira_autotests_cloud.png" alt="Jira Integration" width="80%">
+</p>
