@@ -2,6 +2,7 @@ package tests;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import data.ButtonsData;
 import data.TestData;
 import drivers.WebDriverProvider;
 import helpers.Attachments;
@@ -20,7 +21,8 @@ public class TestBase {
     ItineraryPage itineraryPage = new ItineraryPage();
     ActivitiesPage activitiesPage = new ActivitiesPage();
     CityGuidePage cityGuidePage = new CityGuidePage();
-  TestData testData = new TestData();
+    TestData testData = new TestData();
+    ButtonsData buttonsData = new ButtonsData();
     @BeforeAll
     static void beforeAll() {
         WebDriverProvider.setConfig();
