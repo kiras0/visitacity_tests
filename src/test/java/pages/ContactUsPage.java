@@ -5,7 +5,6 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static com.codeborne.selenide.Selenide.open;
@@ -20,7 +19,7 @@ public class ContactUsPage {
     private final ElementsCollection contactFormMsg = $("#aboutPages").$$(".visit-title-md");
     @Step("Open 'Contact Us' page")
     public ContactUsPage openContactUsPage() {
-        open(baseUrl+"/contact");
+        open("/contact");
         bodyAbout.shouldHave(text("Contact Us"));
         return this;
     }
@@ -39,13 +38,13 @@ public class ContactUsPage {
         messageContainer.setValue(message);
         return this;
     }
-    @Step("Press 'Send Message' button")
-    public ContactUsPage pressSubmit() {
+    @Step("Click 'Send Message' button")
+    public ContactUsPage clickSendBtn() {
         submitBtn.shouldHave(text("Send Message")).click();
         return this;
     }
     @Step("Asserting error message is displayed")
-    public ContactUsPage errorMessage() {
+    public ContactUsPage assertErrorMessage() {
         String errorMessage = contactFormMsg.get(1).getText();
         String errorText = "Please fill out all fields";
         assertThat(errorText).isEqualTo(errorMessage);

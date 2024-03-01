@@ -36,12 +36,12 @@ public class MyPlanTest extends TestBase {
                 .pressGo();
         cityGuidePage.openFirstItinerary();
         itineraryPage.itineraryLoaded()
-                .addAttractions()
-                .pressFirstHeart()
-                .confirmActivityDelete()
-                .guideCreatedMessageCheck()
-                .closeCreatedGuideWin()
-                .closeActivitiesWin();
+                .clickSideMenuButton(buttonsData.btnAddAttractions)
+                .clickFirstHeart()
+                .clickConfirmDelete()
+                .checkGuideCreatedMessage()
+                .closeGuideCreatedMessage()
+                .closeActivitiesWindow();
         myPlanPage.openMyPlans()
                 .checkMyPlansHasGuide();
     }

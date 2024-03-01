@@ -14,7 +14,7 @@ public class CityGuidePage {
             itinThumImg = $(".city-thumbnail").$("img"),
             itineraryTitle = $(By.xpath("//div[@title='Click to see Itinerary']"));
     @Step("Checking that correct guide loaded")
-    public CityGuidePage guideLoaded(String cityName) {
+    public CityGuidePage checkGuideLoaded(String cityName) {
         title.shouldHave(text(cityName + " in 2 Days"));
         return this;
     }
@@ -25,8 +25,7 @@ public class CityGuidePage {
     }
     @Step("Getting the Title of itinerary")
     public String saveFirstTitle() {
-        String itinTitle = itineraryTitle.getText();
-        return itinTitle;
+        return itineraryTitle.getText();
     }
     @Step("Pressing on Image of first itinerary")
     public CityGuidePage openFirstItinerary() {

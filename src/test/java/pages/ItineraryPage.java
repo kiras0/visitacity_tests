@@ -25,58 +25,49 @@ public class ItineraryPage {
        return this;
     }
     @Step("Checking that Itinerary has activities")
-    public ItineraryPage itineraryNotEmpty() {
+    public ItineraryPage checkItineraryNotEmpty() {
         itinerary.shouldNotBe(empty);
         return this;
     }
     @Step("Checking that Itinerary is empty")
-    public ItineraryPage itineraryIsEmpty() {
+    public ItineraryPage checkItineraryIsEmpty() {
         itinerary.shouldBe(empty);
         return this;
     }
-    @Step("Pressing on 'More Options' button")
-    public ItineraryPage moreOptions() {
-        sideMenuOptions.findBy(text("More Option")).click();
-        return this;
-    }
-    @Step("Pressing on 'Remove Day' button")
-    public ItineraryPage removeDays() {
-        sideMenuOptions.findBy(text("Remove Day")).click();
-        return this;
-    }
-    @Step("Pressing on 'Add Attractions' button")
-    public ItineraryPage addAttractions() {
-        sideMenuOptions.findBy(text("Add Attractions")).click();
+
+    @Step("Pressing on side menu button")
+    public ItineraryPage clickSideMenuButton(String sideButton) {
+        sideMenuOptions.findBy(text(sideButton)).click();
         return this;
     }
     @Step("Pressing on Heart to delete first activity")
-    public ItineraryPage pressFirstHeart() {
+    public ItineraryPage clickFirstHeart() {
         activitiesHeart.findBy(visible).click();
         return this;
     }
     @Step("Selected day Delete from itinerary")
-    public ItineraryPage dayDelete() {
+    public ItineraryPage clickDayDelete() {
         firstBtn.click();
         return this;
     }
     @Step("Confirm Delete the activity")
-    public ItineraryPage confirmActivityDelete() {
+    public ItineraryPage clickConfirmDelete() {
         firstBtn.click();
         return this;
     }
     @Step("Checking successful 'Guide Created' message")
-    public ItineraryPage guideCreatedMessageCheck() {
+    public ItineraryPage checkGuideCreatedMessage() {
         String createdGuideText = "Congrats! Your Rome Travel Guide Was Created";
         createdGuideMessage.shouldHave(text(createdGuideText));
         return this;
     }
     @Step("Closing 'Guide Created' message")
-    public ItineraryPage closeCreatedGuideWin() {
+    public ItineraryPage closeGuideCreatedMessage() {
         closeCreGuiMsgBtn.click();
         return this;
     }
     @Step("Closing Activities window")
-    public ItineraryPage closeActivitiesWin() {
+    public ItineraryPage closeActivitiesWindow() {
         closeActBtn.click();
         return this;
     }

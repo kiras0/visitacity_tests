@@ -21,7 +21,7 @@ public class JoinTest extends TestBase {
                 .setFirstName(testData.firstName)
                 .setLastName(testData.lastName)
                 .setEmail(testData.email)
-                .pressSubmit()
-                .nullPasswordMessage();
+                .clickSignUp()
+                .checkNullPasswordMessage();
     }
 }
