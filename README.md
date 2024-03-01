@@ -24,18 +24,18 @@
 
 ## :pushpin: Project description
 
-:information_source: Written in Java using the Selenide testing framework\
-:information_source:Page Object Design\
-:information_source:Configuration Using Owner Technology for Test Execution Based on Build Parameters\
-:information_source:Local and Remote Test Execution Capability\
-:information_source:When running tests to launch browsers, Selenoid is utilized\
-:information_source:Using Faker for Data Generation\
-:information_source:The build tool in this project is Gradle\
-:information_source:Integration with Allure TestOps\
+:information_source: Written in <code>Java</code> using the <code>Selenide</code> testing framework\
+:information_source:<code>Page Object</code> Design\
+:information_source:Configuration Using <code>Owner</code> Technology for Test Execution Based on <code>Build Parameters</code>\
+:information_source:<code>Local</code> and <code>Remote</code> Test Execution Capability\
+:information_source:When running tests to launch browsers <code>Selenoid</code> is utilized\
+:information_source:Using <code>Faker</code> for Data Generation\
+:information_source:The build tool in this project is <code>Gradle</code>\
+:information_source:Integration with <code>Allure TestOps</code>\
 :information_source:Direct Test Execution from Allure TestOps\
-:information_source:Allure Reports provide detailed and visually appealing reports\
+:information_source:<code>Allure Reports</code> provide detailed and visually appealing reports\
 :information_source:Each Selenoid run has not only a screenshot but also a video of the test execution\
-:information_source:Integration with Jira\
+:information_source:Integration with <code>Jira</code>\
 
 ## 	:wrench: Tools and Instruments
 
