@@ -35,7 +35,7 @@
 :information_source:Direct Test Execution from Allure TestOps\
 :information_source:<code>Allure Reports</code> provide detailed and visually appealing reports\
 :information_source:Each Selenoid run has not only a screenshot but also a video of the test execution\
-:information_source:Integration with <code>Jira</code>\
+:information_source:Integration with <code>Jira</code>
 
 ## 	:wrench: Tools and Instruments
 
