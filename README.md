@@ -6,6 +6,7 @@
 </a></p>
 
 ## :link: Contents
+- [Project description](#pushpin-project-description)
 - [Tools and Istruments](#tools-and-instruments)
 - [Test Cases](#bookmark_tabs-test-cases)
 - - [Automation Test](#desktop_computer-automated-tests)
@@ -21,21 +22,35 @@
 - - [Telegram](#img-width3-titletelegram-srcmediaimagestelegram-logosvg-telegram-test-result-notification)
 - [Jira](#img-width4-titlejenkins-srcmediaimagesjira-logosvgjira-integration)
 
+## :pushpin: Project description
+
+:information_source: Written in Java using the Selenide testing framework
+:information_source:Page Object Design
+:information_source:Configuration Using Owner Technology for Test Execution Based on Build Parameters
+:information_source:Local and Remote Test Execution Capability
+:information_source:When running tests to launch browsers, Selenoid is utilized
+:information_source:Using Faker for Data Generation
+:information_source:The build tool in this project is Gradle
+:information_source:Integration with Allure TestOps
+:information_source:Direct Test Execution from Allure TestOps
+:information_source:Allure Reports provide detailed and visually appealing reports
+:information_source:Each Selenoid run has not only a screenshot but also a video of the test execution
+:information_source:Integration with Jira
 
 ## 	:wrench: Tools and Instruments
 
 <p  align="center">
-  <code><img width="5%" title="IntelliJ IDEA" src="media/images/IDEA-logo.svg"></code>
-  <code><img width="5%" title="Java" src="media/images/java-logo.svg"></code>
-  <code><img width="5%" title="Selenide" src="media/images/selenide-logo.svg"></code>
-  <code><img width="5%" title="Selenoid" src="media/images/selenoid-logo.svg"></code>
-  <code><img width="5%" title="Gradle" src="media/images/gradle-logo.svg "></code>
-  <code><img width="5%" title="JUnit5" src="media/images/junit5-logo.svg"></code>
-  <code><img width="5%" title="Jenkins" src="media/images/jenkins-logo.svg"></code>
-  <code><img width="5%" title="Allure Report" src="media/images/allure-report-logo.svg"></code>
-  <code><img width="5%" title="Allure TestOps" src="media/images/allure-testOps-logo.svg"></code>
-  <code><img width="5%" title="Jira" src="media/images/jira-logo.svg"></code>
-  <code><img width="5%" title="Telegram" src="media/images/telegram-logo.svg"></code>
+  <code><a href="https://www.jetbrains.com/idea/"><img width="5%" title="IntelliJ IDEA" src="media/images/IDEA-logo.svg"></a></code>
+  <code><a href="https://www.java.com/"><img width="5%" title="Java" src="media/images/java-logo.svg"></a></code>
+  <code><a href="https://selenide.org/"><img width="5%" title="Selenide" src="media/images/selenide-logo.svg"></a></code>
+  <code><a href="https://aerokube.com/selenoid/"><img width="5%" title="Selenoid" src="media/images/selenoid-logo.svg"></a></code>
+  <code><a href="https://gradle.org/"><img width="5%" title="Gradle" src="media/images/gradle-logo.svg "></a></code>
+  <code><a href="https://junit.org/junit5/"><img width="5%" title="JUnit5" src="media/images/junit5-logo.svg"></a></code>
+  <code><a href="https://www.jenkins.io/"><img width="5%" title="Jenkins" src="media/images/jenkins-logo.svg"></a></code>
+  <code><a href="https://allurereport.org/"><img width="5%" title="Allure Report" src="media/images/allure-report-logo.svg"></a></code>
+  <code><a href="https://qameta.io/"><img width="5%" title="Allure TestOps" src="media/images/allure-testOps-logo.svg"></a></code>
+  <code><a href="https://jira.atlassian.com/"><img width="5%" title="Jira" src="media/images/jira-logo.svg"></a></code>
+  <code><a href="https://web.telegram.org/"><img width="5%" title="Telegram" src="media/images/telegram-logo.svg"></a></code>
 </p>
 
 # :bookmark_tabs: Test Cases
