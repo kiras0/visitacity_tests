@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 @Owner("Kiras0")
 @Feature("Testing of different search functionalities")
-@Tags({@Tag("ui"), @Tag("search")})
+@Tag("search")
 @Severity(SeverityLevel.BLOCKER)
 @DisplayName("Testing search functionality on index page")
 public class SearchTest extends TestBase {

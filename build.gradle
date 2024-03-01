@@ -63,9 +63,29 @@ tasks.withType(Test) {
     }
 }
 
-task ui_test(type: Test) {
+task contactUs_test(type: Test) {
     useJUnitPlatform {
-        includeTags("ui")
+        includeTags("contactUs")
+    }
+}
+task itinerary_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("itinerary")
+    }
+}
+task join_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("join")
+    }
+}
+task myPlan_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("myPlan")
+    }
+}
+task search_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("search")
     }
 }
 

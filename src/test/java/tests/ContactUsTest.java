@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 @Owner("Kiras0")
 @Feature("Testing 'Contact Us' Form submission error")
-@Tags({@Tag("ui"), @Tag("contactUs")})
+@Tag("contactUs")
 @Severity(SeverityLevel.NORMAL)
 @DisplayName("Testing 'Contact Us' Form")
 public class ContactUsTest extends TestBase{

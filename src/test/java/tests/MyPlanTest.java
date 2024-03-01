@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 @Owner("Kiras0")
 @Feature("Testing 'My Plan' functionality")
-@Tags({@Tag("ui"), @Tag("myPLan")})
+@Tag("myPLan")
 @Severity(SeverityLevel.BLOCKER)
 @DisplayName("Testing of Guest user experience with 'My Plan'")
 public class MyPlanTest extends TestBase {

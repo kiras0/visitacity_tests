@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 @Owner("Kiras0")
 @Feature("Testing of new user registration errors")
-@Tags({@Tag("ui"), @Tag("join")})
+@Tag("join")
 @DisplayName("Testing Join functionality")
 public class JoinTest extends TestBase {
 

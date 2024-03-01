@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 @Owner("Kiras0")
 @Feature("Itinerary features functionality testing")
-@Tags({@Tag("ui"), @Tag("itinerary")})
+@Tag("itinerary")
 @Severity(SeverityLevel.BLOCKER)
 @DisplayName("Itinerary functionality tests")
 public class ItineraryTest extends TestBase{
