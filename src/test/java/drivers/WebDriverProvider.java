@@ -8,16 +8,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 public class WebDriverProvider {
-    public static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+    public static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class);
+
     public static void setConfig() {
         Configuration.baseUrl = config.getBaseUrl();
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
         Configuration.browserSize = config.getBrowserSize();
-        String remoteUrl = WebDriverProvider.config.getRemoteUrl();
 
         if (config.isRemote()) {
-            Configuration.remote = remoteUrl;
+            Configuration.remote = WebDriverProvider.config.getRemoteUrl();
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
