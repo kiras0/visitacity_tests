@@ -17,12 +17,12 @@ public class ItineraryTest extends TestBase{
     @Test
     void guideCreateTest() {
         mainPage.openPage()
-                .search(testData.presetCity);
+                .setSearch(testData.presetCity);
         cityPage.selectGuideDays(testData.presetCity)
                 .pressGo();
-        cityGuidePage.guideLoaded(testData.presetCity)
+        cityGuidePage.checkGuideLoaded(testData.presetCity)
                 .openFirstItinerary();
-        itineraryPage.itineraryNotEmpty();
+        itineraryPage.checkItineraryNotEmpty();
     }
 
     @DisplayName("Deleting days from existing Guide itinerary test")
@@ -30,19 +30,19 @@ public class ItineraryTest extends TestBase{
     @Test
     void deleteDayTest() {
         mainPage.openPage()
-                .search(testData.presetCity);
+                .setSearch(testData.presetCity);
         cityPage.selectGuideDays(testData.presetCity)
                 .pressGo();
-        cityGuidePage.guideLoaded(testData.presetCity)
+        cityGuidePage.checkGuideLoaded(testData.presetCity)
                 .openFirstItinerary();
         itineraryPage.itineraryLoaded()
-                .itineraryNotEmpty()
-                .moreOptions()
-                .removeDays()
-                .dayDelete()
-                .closeCreatedGuideWin()
-                .removeDays()
-                .dayDelete()
-                .itineraryIsEmpty();
+                .checkItineraryNotEmpty()
+                .clickSideMenuButton(buttonsData.btnMoreOptions)
+                .clickSideMenuButton(buttonsData.btnRemoveDays)
+                .clickDayDelete()
+                .closeGuideCreatedMessage()
+                .clickSideMenuButton(buttonsData.btnRemoveDays)
+                .clickDayDelete()
+                .checkItineraryIsEmpty();
     }
 }

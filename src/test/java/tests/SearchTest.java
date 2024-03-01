@@ -20,7 +20,7 @@ public class SearchTest extends TestBase {
     @ParameterizedTest(name = "Searching for {0}")
     void popularCitySearchTest(String popularCityCollection) {
         mainPage.openPage()
-                .search(popularCityCollection);
+                .setSearch(popularCityCollection);
         cityPage.checkForTitle(popularCityCollection);
     }
 
@@ -29,7 +29,7 @@ public class SearchTest extends TestBase {
     @ParameterizedTest(name = "Searching for {0}")
     void citySearchTest(String cityCollection) {
         mainPage.openPage()
-                .search(cityCollection);
+                .setSearch(cityCollection);
         activitiesPage.checkPageLoaded();
     }
 
@@ -39,7 +39,7 @@ public class SearchTest extends TestBase {
     @Test
     void noResultSearchTest() {
         mainPage.openPage()
-                .search(testData.streetName)
-                .failedSearch();
+                .setSearch(testData.streetName)
+                .checkFailedSearchResult();
     }
 }
