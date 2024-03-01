@@ -44,9 +44,8 @@ public class JoinPage {
         return this;
     }
     @Step("Check that Password is required message is displayed")
-    public JoinPage checkNullPasswordMessage() {
-        String missingPassError = "Password is required";
-        loginForm.shouldHave(text(missingPassError));
+    public JoinPage checkNullPasswordMessage(String missingPassErrorText) {
+        loginForm.shouldHave(text(missingPassErrorText));
         return this;
     }
 }

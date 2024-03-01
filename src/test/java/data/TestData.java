@@ -14,5 +14,10 @@ public class TestData {
             subject = faker.educator().course(),
             message = faker.shakespeare().hamletQuote(),
             presetCity = config.getPopularCity(),
-            streetName = faker.address().streetAddress();
+            streetName = faker.address().streetAddress(),
+            textContactUsError = "Please fill out all fields",
+            textMissingPassError = "Password is required",
+            textSearchError = " No results found",
+            textSuccessfulCreatedGuide = "Congrats! Your Rome Travel Guide Was Created";
+
 }

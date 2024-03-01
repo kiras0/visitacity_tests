@@ -25,8 +25,7 @@ public class MainPage {
         return this;
     }
     @Step("Check no results found for Search")
-    public MainPage checkFailedSearchResult() {
-        String searchErrorText = " No results found";
+    public MainPage checkFailedSearchResult(String searchErrorText) {
         errorMsg.shouldHave(text(searchErrorText));
         return this;
     }

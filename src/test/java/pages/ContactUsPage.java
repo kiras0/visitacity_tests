@@ -43,10 +43,9 @@ public class ContactUsPage {
         submitBtn.shouldHave(text("Send Message")).click();
         return this;
     }
-    @Step("Asserting error message is displayed")
-    public ContactUsPage assertErrorMessage() {
+    @Step("Asserting error message is displayed to contact")
+    public ContactUsPage assertErrorMessageDisplayed(String errorText) {
         String errorMessage = contactFormMsg.get(1).getText();
-        String errorText = "Please fill out all fields";
         assertThat(errorText).isEqualTo(errorMessage);
         return this;
     }
