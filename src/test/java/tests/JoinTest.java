@@ -22,6 +22,6 @@ public class JoinTest extends TestBase {
                 .setLastName(testData.lastName)
                 .setEmail(testData.email)
                 .clickSignUp()
-                .checkNullPasswordMessage();
+                .checkNullPasswordMessage(testData.textMissingPassError);
     }
 }

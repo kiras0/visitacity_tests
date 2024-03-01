@@ -40,6 +40,6 @@ public class SearchTest extends TestBase {
     void noResultSearchTest() {
         mainPage.openPage()
                 .setSearch(testData.streetName)
-                .checkFailedSearchResult();
+                .checkFailedSearchResult(testData.textSearchError);
     }
 }

@@ -39,7 +39,7 @@ public class MyPlanTest extends TestBase {
                 .clickSideMenuButton(buttonsData.btnAddAttractions)
                 .clickFirstHeart()
                 .clickConfirmDelete()
-                .checkGuideCreatedMessage()
+                .checkGuideCreatedMessage(testData.textSuccessfulCreatedGuide)
                 .closeGuideCreatedMessage()
                 .closeActivitiesWindow();
         myPlanPage.openMyPlans()

@@ -20,7 +20,7 @@ public class ContactUsTest extends TestBase{
                 .setEmail(testData.email)
                 .setMessage(testData.message)
                 .clickSendBtn()
-                .assertErrorMessage();
+                .assertErrorMessageDisplayed(testData.textContactUsError);
     }
 
     @DisplayName("Submitting a Form with incorrect email credentials test.")
@@ -32,6 +32,6 @@ public class ContactUsTest extends TestBase{
                 .setSubject(testData.subject)
                 .setMessage(testData.message)
                 .clickSendBtn()
-                .assertErrorMessage();
+                .assertErrorMessageDisplayed(testData.textContactUsError);
     }
 }
